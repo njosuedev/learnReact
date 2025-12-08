@@ -1,0 +1,22 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-body {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background: #efefef;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background: white;
+}

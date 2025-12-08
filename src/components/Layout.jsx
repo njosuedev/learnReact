@@ -1,17 +1,32 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import './Layout.css';
 
-export default function Layout({ style }) {
+export default function Layout() {
   return (
-    <div className="layout" style={style}>
+    <div className="layout">
+
       <Navbar />
 
-      <main className="content">
-        <Outlet />
-      </main>
+      {/* Page Body */}
+      <div className="page-body">
+
+        {/* Sidebar */}
+        <aside className="sidebar">
+          <h2>Sidebar</h2>
+          <p>Links or menu here</p>
+        </aside>
+
+        {/* Main page content */}
+        <main className="content">
+          <Outlet />
+        </main>
+
+      </div>
 
       <Footer />
+
     </div>
   );
 }

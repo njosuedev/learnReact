@@ -1,3 +1,3 @@
-export default function About() {
-  return <h1>About Page</h1>;
+export default function About({sendCount}) {
+  return <h1>About Page {sendCount}</h1>;
 }
