@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import { UsersContext } from "../contexts/UsersContext.jsx";
 import { SchoolsContext } from "../contexts/SchoolsContext.jsx";
 
@@ -7,17 +7,28 @@ export default function Home() {
   const { users, loading, error } = useContext(UsersContext);
   const { schools, loadingSchools, schoolsError } = useContext(SchoolsContext);
 
+  // Get active filter from Layout context
+  const { activeFilter } = useOutletContext();
+
   const [searchUser, setSearchUser] = useState("");
   const [searchSchool, setSearchSchool] = useState("");
 
-  const filteredUsers = users.filter((user) =>
-    user.username.toLowerCase().includes(searchUser.toLowerCase())
-  );
-  const filteredSchools = schools.filter((school) =>
+  // Filter users by search + active/inactive
+  const filteredUsers = users
+    .filter(user =>
+      user.username.toLowerCase().includes(searchUser.toLowerCase())
+    )
+    .filter(user => {
+      if (activeFilter === "all") return true;
+      if (activeFilter === "active") return user.isActive;
+      if (activeFilter === "inactive") return !user.isActive;
+      return true;
+    });
+
+  // Filter schools by search
+  const filteredSchools = schools.filter(school =>
     school.name.toLowerCase().includes(searchSchool.toLowerCase())
   );
-
-
 
   return (
     <>
@@ -44,7 +55,7 @@ export default function Home() {
                 {filteredUsers.map((user) => (
                   <li key={user.id}>
                     <Link
-                      to={`/${user.username}`} // dynamic route to user profile
+                      to={`/${user.username}`}
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       {user.username} - {user.email} - {user.phone} - {user.role} -{" "}
@@ -58,22 +69,21 @@ export default function Home() {
             )}
           </>
         )}
-
       </div>
 
       {/* SCHOOLS SECTION */}
-      <div>
+      <div style={{ marginTop: "2rem" }}>
         <h1>Schools List</h1>
 
         {loadingSchools && <p>Loading schools...</p>}
         {schoolsError && <p style={{ color: "red" }}>Error: {schoolsError}</p>}
 
-        {!loading && !error && (
+        {!loadingSchools && !schoolsError && (
           <>
             {/* Search input */}
             <input
               type="text"
-              placeholder="Search School..."
+              placeholder="Search schools..."
               value={searchSchool}
               onChange={(e) => setSearchSchool(e.target.value)}
               style={{ marginBottom: "1rem", padding: "0.5rem", width: "50%" }}
@@ -83,12 +93,17 @@ export default function Home() {
               <ul>
                 {filteredSchools.map((school) => (
                   <li key={school.id}>
-                    {school.name} - {school.addess} - {school.phone} - {school.type} - {school.studentCount} -{""}
+                    <Link
+                      to={`/schools/${school.name.trim().replace(/\s+/g, "-")}`}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      {school.name} - {school.address} - {school.phone} - {school.type} - {school.studentsCount}
+                    </Link>
                   </li>
                 ))}
               </ul>
             ) : (
-              <p>No users found.</p>
+              <p>No schools found.</p>
             )}
           </>
         )}
