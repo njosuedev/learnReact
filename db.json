@@ -1,0 +1,36 @@
+{
+  "users": [
+    { "id": 1, "username": "Josue", "email": "josue@example.com", "phone": "0799000001", "role": "admin", "isActive": true },
+    { "id": 2, "username": "Hope", "email": "hope@example.com", "phone": "0799000002", "role": "user", "isActive": true },
+    { "id": 3, "username": "Alice", "email": "alice@example.com", "phone": "0799000003", "role": "user", "isActive": false },
+    { "id": 4, "username": "Mark", "email": "mark@example.com", "phone": "0799000004", "role": "user", "isActive": true },
+    { "id": 5, "username": "John", "email": "john@example.com", "phone": "0799000005", "role": "user", "isActive": true },
+    { "id": 6, "username": "Sarah", "email": "sarah@example.com", "phone": "0799000006", "role": "user", "isActive": false },
+    { "id": 7, "username": "David", "email": "david@example.com", "phone": "0799000007", "role": "user", "isActive": true },
+    { "id": 8, "username": "Emma", "email": "emma@example.com", "phone": "0799000008", "role": "user", "isActive": true },
+    { "id": 9, "username": "Michael", "email": "michael@example.com", "phone": "0799000009", "role": "user", "isActive": true },
+    { "id": 10, "username": "Olivia", "email": "olivia@example.com", "phone": "0799000010", "role": "user", "isActive": true },
+    { "id": 11, "username": "James", "email": "james@example.com", "phone": "0799000011", "role": "user", "isActive": false },
+    { "id": 12, "username": "Sophia", "email": "sophia@example.com", "phone": "0799000012", "role": "user", "isActive": true },
+    { "id": 13, "username": "William", "email": "william@example.com", "phone": "0799000013", "role": "user", "isActive": true },
+    { "id": 14, "username": "Isabella", "email": "isabella@example.com", "phone": "0799000014", "role": "user", "isActive": false },
+    { "id": 15, "username": "Ethan", "email": "ethan@example.com", "phone": "0799000015", "role": "user", "isActive": true },
+    { "id": 16, "username": "Mia", "email": "mia@example.com", "phone": "0799000016", "role": "user", "isActive": true },
+    { "id": 17, "username": "Benjamin", "email": "benjamin@example.com", "phone": "0799000017", "role": "user", "isActive": true },
+    { "id": 18, "username": "Charlotte", "email": "charlotte@example.com", "phone": "0799000018", "role": "user", "isActive": true },
+    { "id": 19, "username": "Lucas", "email": "lucas@example.com", "phone": "0799000019", "role": "user", "isActive": false },
+    { "id": 20, "username": "Amelia", "email": "amelia@example.com", "phone": "0799000020", "role": "user", "isActive": true }
+  ],
+  "schools": [
+    { "id": 1, "name": "Green Valley High School", "address": "123 Green St, Kigali", "phone": "0789000001", "type": "High School", "studentsCount": 850 },
+    { "id": 2, "name": "Sunrise Primary School", "address": "45 Sunrise Ave, Kigali", "phone": "0789000002", "type": "Primary School", "studentsCount": 600 },
+    { "id": 3, "name": "Mountain View Secondary School", "address": "12 Mountain Rd, Kigali", "phone": "0789000003", "type": "Secondary School", "studentsCount": 700 },
+    { "id": 4, "name": "Riverside Primary School", "address": "78 Riverside St, Kigali", "phone": "0789000004", "type": "Primary School", "studentsCount": 500 },
+    { "id": 5, "name": "Horizon High School", "address": "34 Horizon Blvd, Kigali", "phone": "0789000005", "type": "High School", "studentsCount": 900 },
+    { "id": 6, "name": "Star Academy", "address": "56 Star Ln, Kigali", "phone": "0789000006", "type": "Secondary School", "studentsCount": 650 },
+    { "id": 7, "name": "Rainbow Primary School", "address": "89 Rainbow St, Kigali", "phone": "0789000007", "type": "Primary School", "studentsCount": 550 },
+    { "id": 8, "name": "Blue Sky Secondary School", "address": "101 Blue Sky Ave, Kigali", "phone": "0789000008", "type": "Secondary School", "studentsCount": 720 },
+    { "id": 9, "name": "Silver Oak High School", "address": "202 Silver Oak St, Kigali", "phone": "0789000009", "type": "High School", "studentsCount": 880 },
+    { "id": 10, "name": "Sunset Primary School", "address": "303 Sunset Blvd, Kigali", "phone": "0789000010", "type": "Primary School", "studentsCount": 630 }
+  ]
+}
