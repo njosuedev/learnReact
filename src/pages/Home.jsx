@@ -21,7 +21,7 @@ export default function Parent(){
 function Child({sendMessage}){
   return( 
     <button onClick={() => sendMessage(1) }>
-      Send Message
+      Send
     </button>
   )
 }
