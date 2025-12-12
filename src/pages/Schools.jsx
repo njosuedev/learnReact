@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { UsersContext } from "../contexts/UsersContext.jsx";
 import { SchoolsContext } from "../contexts/SchoolsContext.jsx";
 
 export default function Home() {

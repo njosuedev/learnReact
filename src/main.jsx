@@ -2,16 +2,16 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx';
-import { UsersProvider } from './contexts/UsersContext.jsx';
 import { SchoolsProvider } from './contexts/SchoolsContext.jsx';
+import { ProductsProvider } from './contexts/ProductsContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <StrictMode>
       <SchoolsProvider>
-        <UsersProvider>
-          <App />
-        </UsersProvider>
+          <ProductsProvider>
+            <App />
+          </ProductsProvider>
       </SchoolsProvider>
     </StrictMode>
   </StrictMode>

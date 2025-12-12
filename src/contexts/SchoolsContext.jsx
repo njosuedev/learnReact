@@ -10,7 +10,7 @@ export const SchoolsProvider = ({ children }) => {
   useEffect(() => {
     async function fetchSchools() {
       try {
-        const res = await fetch("http://localhost:5000/schools");
+        const res = await fetch("http://localhost:3000/schools");
 
         if (!res.ok) throw new Error("Failed to fetch schools");
 

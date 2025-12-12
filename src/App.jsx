@@ -1,23 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Schools from "./pages/Schools"
-import Profile from "./components/Profile";
+import ProductProfile from "./components/ProductProfile";
 
 export default function App() {
-
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/schools" element={<Schools />} />
-          <Route path="/schools/:name" element={<Profile />} />
-          <Route path="/:username" element={<Profile />} />
+          <Route path="/products/:title" element={<ProductProfile />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-
