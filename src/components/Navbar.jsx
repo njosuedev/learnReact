@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="logo-link">Amazon</Link>
+        <Link to="/" className="logo-link">Logo</Link>
       </div>
 
       <div className="navbar-search">
