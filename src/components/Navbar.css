@@ -1,88 +1,85 @@
-/* Navbar */
+/* Base */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #131921; /* Amazon dark blue */
-  padding: 0.5rem 1rem;
-  color: white;
+  background-color: #ffffff;
+  padding: 0.6rem 1rem;
+  color: #1f2937;
   position: sticky;
   top: 0;
   z-index: 1000;
   font-family: Arial, sans-serif;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 /* Logo */
-.navbar-left .logo-link {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #FFD700; /* Amazon yellow */
-  text-decoration: none;
+.logo-img {
+  height: 32px;
+  width: auto;
 }
 
-/* Search bar */
-.navbar-search {
-  display: flex;
-  flex: 1;
-  margin: 0 1rem;
-  max-width: 600px;
-}
-
-.search-input {
-  flex: 1;
-  padding: 0.5rem 0.75rem;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  font-size: 1rem;
-  outline: none;
-}
-
-.search-button {
-  background-color: #FFD700;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s;
-}
-
-.search-button:hover {
-  background-color: #FFC107;
-}
-
-/* Links */
+/* Desktop Links */
 .navbar-links {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 1.4rem;
 }
 
 .navbar-links a {
-  color: white;
+  color: #1f2937;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s;
 }
 
 .navbar-links a:hover {
-  color: #FFD700;
+  color: #2563eb;
+}
+
+/* Mobile Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-menu a {
+  padding: 0.7rem 0;
+  color: #1f2937;
+  text-decoration: none;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-menu a:hover {
+  color: #2563eb;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-search {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
   .navbar-links {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu.show {
+    display: flex;
   }
 }

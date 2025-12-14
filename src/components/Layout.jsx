@@ -1,46 +1,40 @@
 import { Outlet, useNavigate } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { useState, useContext, useEffect } from "react";
 import { ProductsContext } from "../contexts/ProductsContext.jsx";
-import './Layout.css';
+import "./Layout.css";
 
 export default function Layout() {
   const navigate = useNavigate();
   const { products } = useContext(ProductsContext);
 
   const [activeCategory, setActiveCategory] = useState("all");
+  const [categories, setCategories] = useState({});
 
-  // Track open/closed state for parent categories
-  const [openCategories, setOpenCategories] = useState({});
-
-  const [categories, setCategories] = useState({ all: [] });
-
-  // Extract nested categories dynamically
   useEffect(() => {
-    if (products && products.length > 0) {
-      const grouped = {};
-      products.forEach((p) => {
-        const parent = p.parentCategory || p.category;
-        if (!grouped[parent]) grouped[parent] = [];
-        if (!grouped[parent].includes(p.category)) grouped[parent].push(p.category);
-      });
-      setCategories({ all: [], ...grouped });
+    if (!products?.length) return;
 
-      // Initialize open state
-      const initialOpen = {};
-      Object.keys(grouped).forEach(key => initialOpen[key] = false);
-      setOpenCategories(initialOpen);
-    }
+    const grouped = {};
+    products.forEach(p => {
+      const cat = p.category.toLowerCase();
+      const [main, sub] = cat.split("/");
+
+      if (!grouped[main]) grouped[main] = new Set();
+      if (sub) grouped[main].add(sub);
+    });
+
+    const formatted = {};
+    Object.keys(grouped).forEach(k => {
+      formatted[k] = Array.from(grouped[k]);
+    });
+
+    setCategories(formatted);
   }, [products]);
 
-  const toggleParent = (parent) => {
-    setOpenCategories(prev => ({ ...prev, [parent]: !prev[parent] }));
-  };
-
-  const handleCategorySelect = (category) => {
-    setActiveCategory(category);
-    navigate("/"); // go back to Home to see filtered products
+  const handleSelect = (value) => {
+    setActiveCategory(value);
+    navigate("/");
   };
 
   return (
@@ -48,62 +42,53 @@ export default function Layout() {
       <Navbar />
 
       <div className="layout-body">
-
         {/* Sidebar */}
         <aside className="layout-sidebar">
-          <h2>Product Categories</h2>
+          <h2 className="sidebar-title">Categories</h2>
 
-          <div className="filter-group">
-            {Object.entries(categories).map(([parent, children]) => (
-              <div key={parent} style={{ marginBottom: "1rem" }}>
-                {parent !== "all" && (
-                  <div
-                    onClick={() => toggleParent(parent)}
-                    style={{ cursor: "pointer", fontWeight: "bold" }}
-                  >
-                    {parent.charAt(0).toUpperCase() + parent.slice(1)}
-                    <span style={{ float: "right" }}>
-                      {openCategories[parent] ? "▲" : "▼"}
-                    </span>
-                  </div>
-                )}
+          <label className={`radio-item ${activeCategory === "all" ? "active" : ""}`}>
+            <input
+              type="radio"
+              name="category"
+              checked={activeCategory === "all"}
+              onChange={() => handleSelect("all")}
+            />
+            All Products
+          </label>
 
-                <div style={{ marginLeft: "1rem", display: parent === "all" || openCategories[parent] ? "block" : "none" }}>
-                  {parent === "all" && (
-                    <label>
+          {Object.keys(categories).map(main => (
+            <div key={main} className="category-group">
+              <p className="category-main">
+                {main.charAt(0).toUpperCase() + main.slice(1)}
+              </p>
+
+              <div className="category-children">
+                {categories[main].map(sub => {
+                  const value = `${main}/${sub}`;
+                  return (
+                    <label
+                      key={sub}
+                      className={`radio-item sub ${activeCategory === value ? "active" : ""}`}
+                    >
                       <input
                         type="radio"
                         name="category"
-                        value="all"
-                        checked={activeCategory === "all"}
-                        onChange={() => handleCategorySelect("all")}
+                        checked={activeCategory === value}
+                        onChange={() => handleSelect(value)}
                       />
-                      All
+                      {sub.charAt(0).toUpperCase() + sub.slice(1)}
                     </label>
-                  )}
-                  {children.map((child) => (
-                    <label key={child} style={{ display: "block" }}>
-                      <input
-                        type="radio"
-                        name="category"
-                        value={child}
-                        checked={activeCategory === child}
-                        onChange={() => handleCategorySelect(child)}
-                      />
-                      {child.charAt(0).toUpperCase() + child.slice(1)}
-                    </label>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </aside>
 
-        {/* Main content */}
+        {/* Content */}
         <main className="layout-content">
           <Outlet context={{ activeCategory }} />
         </main>
-
       </div>
 
       <Footer />

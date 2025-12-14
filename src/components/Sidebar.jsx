@@ -1,17 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import { ProductsContext } from "../contexts/ProductsContext.jsx";
-import './Sidebar.css';
+import "./Sidebar.css";
 
 export default function Sidebar({ activeCategory, setActiveCategory }) {
   const { products } = useContext(ProductsContext);
 
-  // State to hold nested categories
   const [categories, setCategories] = useState({});
-
-  // State to track expanded main categories
   const [expanded, setExpanded] = useState({});
 
-  // Build nested categories from products
   useEffect(() => {
     if (!products) return;
 
@@ -33,56 +29,52 @@ export default function Sidebar({ activeCategory, setActiveCategory }) {
     setCategories(formatted);
   }, [products]);
 
-  const toggleExpand = (main) => {
-    setExpanded(prev => ({ ...prev, [main]: !prev[main] }));
-  };
-
-  const handleChange = (value) => {
-    setActiveCategory(value);
-  };
-
   return (
     <aside className="sidebar">
-      <h2>Categories</h2>
+      <h2 className="sidebar-title">Categories</h2>
 
-      {/* All products */}
-      <div className="category">
-        <label>
-          <input
-            type="radio"
-            name="category"
-            value="all"
-            checked={activeCategory === "all"}
-            onChange={() => handleChange("all")}
-          />
-          All
-        </label>
-      </div>
+      {/* All */}
+      <label className={`radio-item ${activeCategory === "all" ? "active" : ""}`}>
+        <input
+          type="radio"
+          name="category"
+          checked={activeCategory === "all"}
+          onChange={() => setActiveCategory("all")}
+        />
+        All Products
+      </label>
 
-      {/* Main + subcategories */}
+      {/* Categories */}
       {Object.keys(categories).map(main => (
-        <div className="category" key={main}>
-          <button className="main-cat" onClick={() => toggleExpand(main)}>
-            {main.charAt(0).toUpperCase() + main.slice(1)}
-            <span>{expanded[main] ? "▲" : "▼"}</span>
+        <div key={main} className="category-block">
+          <button
+            className="main-cat"
+            onClick={() => setExpanded(p => ({ ...p, [main]: !p[main] }))}
+          >
+            <span>{main.charAt(0).toUpperCase() + main.slice(1)}</span>
+            <span className="arrow">{expanded[main] ? "▲" : "▼"}</span>
           </button>
 
-          {expanded[main] && categories[main].length > 0 && (
+          {expanded[main] && (
             <div className="subcategory">
               {categories[main].map(sub => {
                 const value = `${main}/${sub}`;
                 return (
-                  <label key={sub}>
+                  <label
+                    key={sub}
+                    className={`radio-item sub ${
+                      activeCategory === value ? "active" : ""
+                    }`}
+                  >
                     <input
                       type="radio"
                       name="category"
-                      value={value}
-                      checked={activeCategory.toLowerCase() === value.toLowerCase()}
-                      onChange={() => handleChange(value)}
+                      checked={activeCategory === value}
+                      onChange={() => setActiveCategory(value)}
                     />
                     {sub.charAt(0).toUpperCase() + sub.slice(1)}
                   </label>
-                )
+                );
               })}
             </div>
           )}
