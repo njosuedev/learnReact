@@ -28,18 +28,16 @@ export default function ProductProfile() {
 
       <div className="product-details">
         <h1>{product.title}</h1>
-        <p className="product-company"><strong>Brand:</strong> {product.company}</p>
+        <p className={`product-status ${product.available ? "available" : "unavailable"}`}>
+          {product.available ? "Available" : "Unavailable"}
+        </p>
         <p className="product-category"><strong>Category:</strong> {product.category}</p>
-        <p className="product-color"><strong>Color:</strong> {product.color}</p>
 
-        <p className="product-price">
-          {product.prevPrice && <span className="prev-price">${product.prevPrice}</span>}
-          <span className="current-price">${product.newPrice}</span>
-        </p>
-
-        <p className="product-stars">
-          {"★".repeat(product.star)} ({product.reviews} reviews)
-        </p>
+        {/* Product Description */}
+        <div className="product-description">
+          <h3>Description</h3>
+          <p>{product.description || "No description available for this product."}</p>
+        </div>
 
         {/* Quantity Selector */}
         <div className="quantity-selector">
@@ -48,12 +46,9 @@ export default function ProductProfile() {
           <button onClick={increaseQty} className="qty-btn">+</button>
         </div>
 
-        <div className="product-actions">
-          <button className="buy-btn">Add to Cart ({quantity})</button>
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
-            Contact on WhatsApp
-          </a>
-        </div>
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+          Contact on WhatsApp
+        </a>
       </div>
     </div>
   );

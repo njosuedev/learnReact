@@ -8,11 +8,9 @@ import { ProductsProvider } from './contexts/ProductsContext.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <StrictMode>
-      <SchoolsProvider>
           <ProductsProvider>
             <App />
           </ProductsProvider>
-      </SchoolsProvider>
     </StrictMode>
   </StrictMode>
 )

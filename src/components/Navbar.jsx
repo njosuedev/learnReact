@@ -14,10 +14,10 @@ export default function Navbar() {
 
       {/* Desktop Links */}
       <div className="navbar-links">
-        <Link to="/">Home</Link>
-        <Link to="/">Deals</Link>
-        <Link to="/">Orders</Link>
-        <Link to="/">Cart</Link>
+        <Link to="/" className="nav-item">Home</Link>
+        <Link to="/products" className="nav-item">Products</Link>
+        <Link to="/about" className="nav-item">About Us</Link>
+        <Link to="/contact" className="nav-item">Contact</Link>
       </div>
 
       {/* Mobile Toggle */}
@@ -27,10 +27,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${open ? "show" : ""}`}>
-        <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-        <Link to="/" onClick={() => setOpen(false)}>Deals</Link>
-        <Link to="/" onClick={() => setOpen(false)}>Orders</Link>
-        <Link to="/" onClick={() => setOpen(false)}>Cart</Link>
+        <Link to="/" onClick={() => setOpen(false)} className="nav-item">Home</Link>
+        <Link to="/products" onClick={() => setOpen(false)} className="nav-item">Products</Link>
+        <Link to="/about" onClick={() => setOpen(false)} className="nav-item">About Us</Link>
+        <Link to="/contact" onClick={() => setOpen(false)} className="nav-item">Contact</Link>
       </div>
     </nav>
   );

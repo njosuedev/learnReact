@@ -1,31 +1,184 @@
 {
   "products": [
-    { "id": 1, "img": "https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg", "title": "Nike Air Monarch IV", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Nike", "color": "white", "category": "Shoes/Sneakers" },
-    { "id": 2, "img": "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg", "title": "Nike Air Vapormax Plus", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Nike", "color": "red", "category": "Shoes/Sneakers" },
-    { "id": 3, "img": "https://m.media-amazon.com/images/I/51+P9uAvb1L._AC_UY695_.jpg", "title": "Nike Waffle One Sneaker", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Nike", "color": "green", "category": "Shoes/Sneakers" },
-    { "id": 4, "img": "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg", "title": "Nike Running Shoe", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Adidas", "color": "black", "category": "Shoes/Sneakers" },
-    { "id": 5, "img": "https://m.media-amazon.com/images/I/41M54ztS6IL._AC_SY625._SX._UX._SY._UY_.jpg", "title": "Flat Slip On Pumps", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Vans", "color": "green", "category": "Shoes/Flats" },
-    { "id": 6, "img": "https://m.media-amazon.com/images/I/71zKuNICJAL._AC_UX625_.jpg", "title": "Knit Ballet Flat", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "50", "company": "Adidas", "color": "black", "category": "Shoes/Flats" },
-    { "id": 7, "img": "https://m.media-amazon.com/images/I/61V9APfz97L._AC_UY695_.jpg", "title": "Loafer Flats", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "50", "company": "Vans", "color": "white", "category": "Shoes/Flats" },
-    { "id": 8, "img": "https://m.media-amazon.com/images/I/71VaQ+V6XnL._AC_UY695_.jpg", "title": "Nike Zoom Freak", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Nike", "color": "green", "category": "Shoes/Sneakers" },
-    { "id": 9, "img": "https://m.media-amazon.com/images/I/61-cBsLhJHL._AC_UY695_.jpg", "title": "Nike Men's Sneaker", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Adidas", "color": "blue", "category": "Shoes/Sneakers" },
-    { "id": 10, "img": "https://m.media-amazon.com/images/I/81xXDjojYKS._AC_UX575_.jpg", "title": "PUMA BLACK-OCE", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "150", "company": "Puma", "color": "green", "category": "Shoes/Sneakers" },
-    { "id": 11, "img": "https://m.media-amazon.com/images/I/71E75yRwCDL._AC_UY575_.jpg", "title": "Pacer Future Sneaker", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "150", "company": "Puma", "color": "red", "category": "Shoes/Sneakers" },
-    { "id": 12, "img": "https://m.media-amazon.com/images/I/71jeoX0rMBL._AC_UX575_.jpg", "title": "Unisex-Adult Super", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "150", "company": "Puma", "color": "black", "category": "Shoes/Sneakers" },
-    { "id": 13, "img": "https://m.media-amazon.com/images/I/61TM6Q9dvxL._AC_UX575_.jpg", "title": "Roma Basic Sneaker", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "150", "company": "Puma", "color": "white", "category": "Shoes/Sneakers" },
-    { "id": 14, "img": "https://m.media-amazon.com/images/I/7128-af7joL._AC_UY575_.jpg", "title": "Pacer Future Doubleknit", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "150", "company": "Puma", "color": "black", "category": "Shoes/Sneakers" },
-    { "id": 15, "img": "https://m.media-amazon.com/images/I/81xXDjojYKS._AC_UX575_.jpg", "title": "Fusion Evo Golf Shoe", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "100", "company": "Puma", "color": "green", "category": "Shoes/Sneakers" },
-    { "id": 16, "img": "https://m.media-amazon.com/images/I/719gdz8lsTS._AC_UX575_.jpg", "title": "Rainbow Chex Skate", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "100", "company": "Vans", "color": "red", "category": "Shoes/Flats" },
-    { "id": 17, "img": "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg", "title": "Low-Top Trainers", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "100", "company": "Vans", "color": "white", "category": "Shoes/Sandals" },
-    { "id": 18, "img": "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg", "title": "Vans Unisex Low-Top", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "100", "company": "Vans", "color": "blue", "category": "Shoes/Sandals" },
-    { "id": 19, "img": "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg", "title": "Classic Bandana Sneakers", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "50", "company": "Nike", "color": "black", "category": "Shoes/Sandals" },
-    { "id": 20, "img": "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg", "title": "Chunky High Heel", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "50", "company": "Vans", "color": "black", "category": "Shoes/Heels" },
-    { "id": 21, "img": "https://m.media-amazon.com/images/I/71czu7WgGuL._AC_UY695_.jpg", "title": "Slip On Stiletto High Heel", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "100", "company": "Puma", "color": "black", "category": "Shoes/Heels" },
-    { "id": 22, "img": "https://m.media-amazon.com/images/I/61men05KRxL._AC_UY625_.jpg", "title": "DREAM PAIRS Court Shoes", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "150", "company": "Nike", "color": "red", "category": "Shoes/Heels" },
-    { "id": 23, "img": "https://m.media-amazon.com/images/I/51PGWTXgf-L._AC_UY625_.jpg", "title": "Low Mid Block Heels", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "200", "company": "Nike", "color": "black", "category": "Shoes/Heels" },
-    { "id": 24, "img": "https://m.media-amazon.com/images/I/616sA5XUKtL._AC_UY675_.jpg", "title": "Chunky High Heel", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "50", "company": "Adidas", "color": "black", "category": "Shoes/Heels" },
-    { "id": 25, "img": "https://m.media-amazon.com/images/I/71h5+MbEK7L._AC_UY625_.jpg", "title": "Amore Fashion Stilettos", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "150", "company": "Adidas", "color": "white", "category": "Shoes/Heels" },
-    { "id": 26, "img": "https://m.media-amazon.com/images/I/61uw5RDxKQL._AC_UY625_.jpg", "title": "Bridal Sandals Glitter", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "50", "company": "Adidas", "color": "black", "category": "Shoes/Heels" },
-    { "id": 27, "img": "https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg", "title": "Wedding Prom Bridal", "star": 1, "reviews": "(123 reviews)", "prevPrice": "$140,00", "newPrice": "50", "company": "Adidas", "color": "black", "category": "Shoes/Flats" }
+    {
+      "id": 1,
+      "title": "Hand Wash Antibacterial",
+      "img": "https://res.cloudinary.com/hksqkdlah/image/upload/c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,h_240,q_auto:low,w_400/v1/ATK%20Reviews/2025/Dish%20Soap/SPS_DishSoap-Hero-9",
+      "newPrice": "200",
+      "category": "Liquid Soap/home use",
+      "available": true,
+      "description": "Gentle antibacterial hand wash, keeps hands clean and soft."
+    },
+    {
+      "id": 2,
+      "title": "Hand Wash Aloe Vera",
+      "img": "https://givanasindustry.com/tasebups/2021/07/dishmaid.jpg",
+      "newPrice": "220",
+      "category": "Liquid Soap/home use",
+      "available": false,
+      "description": "Aloe Vera enriched hand wash that moisturizes while cleansing."
+    },
+    {
+      "id": 3,
+      "title": "Toilet Cleaner Strong",
+      "img": "https://rivertradingltd.com/images/CATALOG/Sanitary/LiquidSoap-5l-big2.png",
+      "newPrice": "300",
+      "category": "Liquid Soap/toilet",
+      "available": true,
+      "description": "Powerful toilet cleaner that removes tough stains and germs."
+    },
+    {
+      "id": 4,
+      "title": "Toilet Cleaner Fresh",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR1ZWPhMO3m53QZ4GjvZ_AQjb_5PcZDjBqgQ&s",
+      "newPrice": "280",
+      "category": "Liquid Soap/toilet",
+      "available": true,
+      "description": "Fresh-scented toilet cleaner for daily hygiene and shine."
+    },
+    {
+      "id": 5,
+      "title": "Laundry Liquid Detergent",
+      "img": "https://m.media-amazon.com/images/I/71BSR4CRJ3L._AC_UF1000,1000_QL80_.jpg",
+      "newPrice": "450",
+      "category": "Liquid Soap/clothes use",
+      "available": false,
+      "description": "Effective laundry detergent for tough stains and vibrant colors."
+    },
+    {
+      "id": 6,
+      "title": "Laundry Liquid Lavender",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaOaLEvwZzosvmoshELzqxsdBLnepu-BCzqA&s",
+      "newPrice": "480",
+      "category": "Liquid Soap/clothes use",
+      "available": true,
+      "description": "Lavender scented laundry liquid for soft, fresh clothes."
+    },
+    {
+      "id": 7,
+      "title": "Floor Cleaner Lemon",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFvCSJ9VW8OXZ7F2sZQpaow8iR1zESPPm1vg&s",
+      "newPrice": "350",
+      "category": "Liquid Soap/cleaning",
+      "available": true,
+      "description": "Lemon-scented floor cleaner that leaves floors sparkling clean."
+    },
+    {
+      "id": 8,
+      "title": "Multi Surface Cleaner",
+      "img": "https://i5.walmartimages.com/seo/Softsoap-Liquid-Hand-Soap-Kitchen-and-Bathroom-Hand-Soap-Juicy-Peach-7-5-Fluid-Ounce-Bottle_e111c20e-a0b4-4dc7-ac25-23f2b10757e9.0ea71f39c6f4b319d9570e8dc746d91a.jpeg",
+      "newPrice": "330",
+      "category": "Liquid Soap/cleaning",
+      "available": false,
+      "description": "Versatile multi-surface cleaner for kitchen, bathroom, and furniture."
+    },
+    {
+      "id": 9,
+      "title": "Cleaning Gloves",
+      "img": "https://murukali.com/cdn/shop/files/Cleanrol-Kitchen-Towel-Double-murukali-com-4977_512x512.jpg?v=1744977640",
+      "newPrice": "100",
+      "category": "Hygien Tools/home use",
+      "available": true,
+      "description": "Durable gloves for safe and hygienic household cleaning."
+    },
+    {
+      "id": 10,
+      "title": "Kitchen Scrub Sponge",
+      "img": "https://murukali.com/cdn/shop/files/Everyday-kitchen-towels-4Pqs-murukali-com-6646_512x512.jpg?v=1744977229",
+      "newPrice": "80",
+      "category": "Hygien Tools/home use",
+      "available": true,
+      "description": "Soft yet effective sponge for cleaning dishes and surfaces."
+    },
+    {
+      "id": 11,
+      "title": "Toilet Brush Set",
+      "img": "https://sensing.konicaminolta.asia/wp-content/uploads/2023/11/Measuring-The-Color-Of-Liquid-Soap.webp",
+      "newPrice": "150",
+      "category": "Hygien Tools/toilet",
+      "available": false,
+      "description": "Complete toilet brush set for efficient bathroom cleaning."
+    },
+    {
+      "id": 12,
+      "title": "Toilet Plunger",
+      "img": "https://ae01.alicdn.com/kf/S3c338c41fc894b568cfa057c4793cf41M.jpg",
+      "newPrice": "180",
+      "category": "Hygien Tools/toilet",
+      "available": true,
+      "description": "Strong plunger for unclogging toilets quickly and safely."
+    },
+    {
+      "id": 13,
+      "title": "Laundry Basket Plastic",
+      "img": "https://kuueza.com/wp-content/uploads/2025/02/liquid-soap-with-shadow.png",
+      "newPrice": "300",
+      "category": "Hygien Tools/clothes use",
+      "available": true,
+      "description": "Lightweight plastic laundry basket for organizing clothes."
+    },
+    {
+      "id": 14,
+      "title": "Clothes Washing Brush",
+      "img": "https://5.imimg.com/data5/ANDROID/Default/2023/2/NG/CT/IY/34927580/product-jpeg.jpg",
+      "newPrice": "120",
+      "category": "Hygien Tools/clothes use",
+      "available": false,
+      "description": "Durable brush for scrubbing clothes manually."
+    },
+    {
+      "id": 15,
+      "title": "Mop Stick",
+      "img": "https://5.imimg.com/data5/SELLER/Default/2021/2/QT/LC/XL/21427697/5-litre-liquid-soap.jpg",
+      "newPrice": "500",
+      "category": "Hygien Tools/cleaning",
+      "available": true,
+      "description": "Sturdy mop stick for effortless floor cleaning."
+    },
+    {
+      "id": 16,
+      "title": "Broom Soft Brush",
+      "img": "https://www.heatingandprocess.com/wp-content/uploads/2017/01/Drum-Heating-Liquid-Soaps.jpg",
+      "newPrice": "200",
+      "category": "Hygien Tools/cleaning",
+      "available": true,
+      "description": "Soft broom for dusting and sweeping all floor types."
+    },
+    {
+      "id": 17,
+      "title": "Dust Pan Set",
+      "img": "https://m.media-amazon.com/images/I/81b3ERqhA6L._SL1500_.jpg",
+      "newPrice": "150",
+      "category": "Hygien Tools/cleaning",
+      "available": false,
+      "description": "Complete dustpan set for easy floor debris collection."
+    },
+    {
+      "id": 18,
+      "title": "Cleaning Cloth Pack",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHEblkSvf57XI9XGw-pzNEA8SzaY4JvPWBng&s",
+      "newPrice": "90",
+      "category": "Hygien Tools/home use",
+      "available": true,
+      "description": "Pack of soft cleaning cloths for multipurpose use."
+    },
+    {
+      "id": 19,
+      "title": "Glass Cleaner Spray",
+      "img": "https://www.tyoemcosmetic.com/wp-content/uploads/Liquid-Soap-Scent-8-300x300.jpg",
+      "newPrice": "260",
+      "category": "Liquid Soap/cleaning",
+      "available": true,
+      "description": "Spray cleaner for streak-free glass and mirrors."
+    },
+    {
+      "id": 20,
+      "title": "Fabric Softener Liquid",
+      "img": "https://static.independent.co.uk/2023/06/28/13/best-luxury-handwash-indybest-review.psd.png",
+      "newPrice": "420",
+      "category": "Liquid Soap/clothes use",
+      "available": false,
+      "description": "Liquid fabric softener that leaves clothes soft and fresh."
+    }
   ]
 }

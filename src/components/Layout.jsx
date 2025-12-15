@@ -2,6 +2,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Banner from "./Banner.jsx";
 import { ProductsContext } from "../contexts/ProductsContext.jsx";
 import "./Layout.css";
 
@@ -40,6 +41,7 @@ export default function Layout() {
   return (
     <div className="layout">
       <Navbar />
+      <Banner />
 
       <div className="layout-body">
         {/* Sidebar */}
