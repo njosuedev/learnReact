@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 My App. All rights reserved.</p>
+        <p>© 2025 hygrosan. All rights reserved.</p>
       </div>
     </footer>
   );

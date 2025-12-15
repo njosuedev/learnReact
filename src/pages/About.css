@@ -1,0 +1,141 @@
+.about-page {
+  font-family: system-ui, sans-serif;
+  color: #333;
+}
+
+/* Hero */
+.about-hero {
+  background: linear-gradient(135deg, #eb262a, #ffb3b5);
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Content */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 1.5rem;
+}
+
+.about-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h2 {
+  margin-bottom: 0.8rem;
+  color: #eb262a;
+}
+
+.about-card ul {
+  padding-left: 1.2rem;
+}
+
+.about-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* CTA */
+.about-cta {
+  background: #eb262a;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.about-cta h2 {
+  margin-bottom: 0.5rem;
+}
+
+.about-cta p {
+  opacity: 0.95;
+}
+
+
+.about-contacts {
+  padding: 3rem 1.5rem;
+  background: #fff;
+  text-align: center;
+}
+
+.about-contacts h2 {
+  font-size: 2rem;
+  color: #eb262a;
+  margin-bottom: 0.5rem;
+}
+
+.contacts-subtitle {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Grid */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card h3 {
+  color: #eb262a;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  color: #eb262a;
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .about-contacts h2 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+}
