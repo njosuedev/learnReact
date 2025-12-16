@@ -114,10 +114,11 @@
   text-align: center;
   font-size: 1.2rem;
   color: #777;
+  text-align: right ;
 }
 
 /* Skeleton Loader */
 .skeleton-box {
-  background: #e0e0e0;
+  background: #f5f1f1;
   border-radius: 0.5rem;
 }
