@@ -52,17 +52,17 @@ function About() {
 
                 <div className="contacts-grid">
                     <div className="contact-card">
-                        <h3>📞 Phone</h3>
+                        <h3>Phone</h3>
                         <p>
-                            <a href="tel:+250790206517">+250 790 206 517</a>
+                            <a href="tel:+250794000813">+250 794 000 813</a>
                         </p>
                     </div>
 
                     <div className="contact-card">
-                        <h3>💬 WhatsApp</h3>
+                        <h3>WhatsApp</h3>
                         <p>
                             <a
-                                href="https://wa.me/250790206517"
+                                href="https://wa.me/250794000813"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -72,14 +72,14 @@ function About() {
                     </div>
 
                     <div className="contact-card">
-                        <h3>✉️ Email</h3>
+                        <h3>Email</h3>
                         <p>
-                            <a href="mailto:info@yourcompany.com">info@yourcompany.com</a>
+                            <a href="mailto:info@hygieneafrica.com">info@hygieneafrica.com</a>
                         </p>
                     </div>
 
                     <div className="contact-card">
-                        <h3>📍 Location</h3>
+                        <h3>Location</h3>
                         <p>Kigali, Rwanda</p>
                     </div>
                 </div>

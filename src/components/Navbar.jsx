@@ -18,9 +18,6 @@ export default function Navbar() {
         <Link to="/" className="nav-item"><FiHome /> Home</Link>
         <Link to="/products" className="nav-item"><FiBox /> Products</Link>
         <Link to="/hygrosan" className="nav-item"><FiInfo /> About</Link>
-        <Link to="/cart" className="nav-cart">
-          <FiShoppingCart /> <span className="cart-badge">2</span>
-        </Link>
       </div>
 
       {/* Mobile Toggle */}
@@ -34,7 +31,6 @@ export default function Navbar() {
         <Link to="/" onClick={() => setOpen(false)}><FiHome /> Home</Link>
         <Link to="/products" onClick={() => setOpen(false)}><FiBox /> Products</Link>
         <Link to="/hygrosan" onClick={() => setOpen(false)}><FiInfo /> About</Link>
-        <Link to="/cart" onClick={() => setOpen(false)}><FiShoppingCart /> Cart</Link>
       </div>
     </nav>
   );
