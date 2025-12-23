@@ -23,16 +23,16 @@ export default function Navbar() {
       {/* Center Links */}
       <div className="navbar-center">
         <NavLink to="/" className="nav-item">
-          <FiHome /> Home
+          <FiHome /> HOME
         </NavLink>
         <NavLink to="/products" className="nav-item">
-          <FiBox /> Products
+          <FiBox /> PRODUCTS
         </NavLink>
         <NavLink to="/hygrosan" className="nav-item">
-          <FiInfo /> About
+          <FiInfo /> ABOUT US
         </NavLink>
         <NavLink to="/contact" className="nav-item">
-          <FiMail /> Contact Us
+          <FiMail /> CONTACT US
         </NavLink>
       </div>
 

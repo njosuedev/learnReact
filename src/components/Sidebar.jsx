@@ -6,57 +6,64 @@ export default function Sidebar({ activeCategory, setActiveCategory }) {
   const { products } = useContext(ProductsContext);
 
   const [categories, setCategories] = useState({});
-  const [expanded, setExpanded] = useState({});
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     if (!products) return;
 
-    const catObj = {};
-    products.forEach((p) => {
-      const [mainCat, subCat] = p.category.split("/").map(c => c.trim());
-      const mainKey = mainCat.toLowerCase();
-      const subKey = subCat?.toLowerCase();
-
-      if (!catObj[mainKey]) catObj[mainKey] = new Set();
-      if (subKey) catObj[mainKey].add(subKey);
+    const map = {};
+    products.forEach(p => {
+      const [main, sub] = p.category.split("/").map(c => c.trim());
+      if (!map[main]) map[main] = new Set();
+      if (sub) map[main].add(sub);
     });
 
     const formatted = {};
-    Object.keys(catObj).forEach(key => {
-      formatted[key] = Array.from(catObj[key]);
+    Object.keys(map).forEach(k => {
+      formatted[k] = Array.from(map[k]);
     });
 
     setCategories(formatted);
   }, [products]);
 
+  const toggleDropdown = (main) => {
+    setOpenDropdown(openDropdown === main ? null : main);
+    setActiveCategory(main); // filter all under main
+  };
+
   return (
     <aside className="sidebar">
       <h2 className="sidebar-title">Categories</h2>
 
-      {/* All */}
+      {/* All products */}
       <label className={`radio-item ${activeCategory === "all" ? "active" : ""}`}>
         <input
           type="radio"
           name="category"
           checked={activeCategory === "all"}
-          onChange={() => setActiveCategory("all")}
+          onChange={() => {
+            setActiveCategory("all");
+            setOpenDropdown(null);
+          }}
         />
         All Products
       </label>
 
-      {/* Categories */}
+      {/* Dropdown categories */}
       {Object.keys(categories).map(main => (
-        <div key={main} className="category-block">
+        <div key={main} className="dropdown">
           <button
-            className="main-cat"
-            onClick={() => setExpanded(p => ({ ...p, [main]: !p[main] }))}
+            className="dropdown-btn"
+            onClick={() => toggleDropdown(main)}
           >
-            <span>{main.charAt(0).toUpperCase() + main.slice(1)}</span>
-            <span className="arrow">{expanded[main] ? "▲" : "▼"}</span>
+            <span>{main}</span>
+            <span className={`icon ${openDropdown === main ? "open" : ""}`}>
+              ▾
+            </span>
           </button>
 
-          {expanded[main] && (
-            <div className="subcategory">
+          {openDropdown === main && (
+            <div className="dropdown-menu">
               {categories[main].map(sub => {
                 const value = `${main}/${sub}`;
                 return (
@@ -72,7 +79,7 @@ export default function Sidebar({ activeCategory, setActiveCategory }) {
                       checked={activeCategory === value}
                       onChange={() => setActiveCategory(value)}
                     />
-                    {sub.charAt(0).toUpperCase() + sub.slice(1)}
+                    {sub}
                   </label>
                 );
               })}

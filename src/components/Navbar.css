@@ -27,10 +27,11 @@
 .navbar-center {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 2rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 0.9rem;
 }
 
 /* Nav items */
@@ -61,14 +62,10 @@
   align-items: center;
   gap: 0.4rem;
   font-weight: 600;
-  color: #333;
+  color: #eb262a;
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.2s ease;
-}
-
-.nav-phone:hover {
-  color: #eb262a;
 }
 
 /* Mobile Toggle */

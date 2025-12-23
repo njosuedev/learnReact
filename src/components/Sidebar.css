@@ -1,92 +1,69 @@
 .sidebar {
   width: 260px;
-  padding: 1.2rem;
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  font-family: Arial, sans-serif;
+  padding: 16px;
+  background: #fff;
+  border-right: 1px solid #eee;
 }
 
-/* Title */
 .sidebar-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.8rem;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
-/* Radio item */
 .radio-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.45rem 0.6rem;
-  border-radius: 8px;
+  display: block;
+  padding: 8px 10px;
+  font-size: 14px;
   cursor: pointer;
-  font-size: 0.95rem;
-  color: #374151;
-  transition: background 0.2s, color 0.2s;
+}
+
+.radio-item input {
+  display: none;
 }
 
 .radio-item:hover {
-  background-color: #f3f4f6;
+  background: #f5f5f5;
 }
 
 .radio-item.active {
-  background-color: #eef2ff;
-  color: #2563eb;
   font-weight: 600;
+  color: #f08804;
 }
 
-/* Radio */
-input[type="radio"] {
-  accent-color: #2563eb;
+.dropdown {
+  margin-top: 6px;
 }
 
-/* Category block */
-.category-block {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-/* Main category */
-.main-cat {
+.dropdown-btn {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 8px 10px;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: none;
-  border: none;
   cursor: pointer;
-  padding: 0.5rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #111827;
-  transition: background 0.2s;
 }
 
-.main-cat:hover {
-  background-color: #f3f4f6;
+.dropdown-btn:hover {
+  background: #f3f3f3;
 }
 
-.arrow {
-  font-size: 0.75rem;
-  color: #6b7280;
+.icon {
+  transition: transform 0.2s ease;
 }
 
-/* Subcategories */
-.subcategory {
-  margin-left: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+.icon.open {
+  transform: rotate(180deg);
 }
 
-.radio-item.sub {
-  font-size: 0.9rem;
-  color: #4b5563;
+.dropdown-menu {
+  padding-left: 14px;
+  margin-top: 4px;
+}
+
+.sub {
+  font-size: 13px;
+  color: #555;
 }

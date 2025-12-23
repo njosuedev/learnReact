@@ -5,7 +5,7 @@
       "title": "Hand Wash Antibacterial",
       "img": "https://res.cloudinary.com/hksqkdlah/image/upload/c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,h_240,q_auto:low,w_400/v1/ATK%20Reviews/2025/Dish%20Soap/SPS_DishSoap-Hero-9",
       "newPrice": "200",
-      "category": "Liquid Soap/home use",
+      "category": "Toilet Disinfectant Liquid/Toilet wash",
       "available": true,
       "description": "Gentle antibacterial hand wash, keeps hands clean and soft."
     },
@@ -14,7 +14,7 @@
       "title": "Hand Wash Aloe Vera",
       "img": "https://givanasindustry.com/tasebups/2021/07/dishmaid.jpg",
       "newPrice": "220",
-      "category": "Liquid Soap/home use",
+      "category": "Multpurpose Liquid Soap/Hand wash",
       "available": false,
       "description": "Aloe Vera enriched hand wash that moisturizes while cleansing."
     },
@@ -23,7 +23,7 @@
       "title": "Toilet Cleaner Strong",
       "img": "https://rivertradingltd.com/images/CATALOG/Sanitary/LiquidSoap-5l-big2.png",
       "newPrice": "300",
-      "category": "Liquid Soap/toilet",
+      "category": "Toilet Disinfectant Liquid/Toilet wash",
       "available": true,
       "description": "Powerful toilet cleaner that removes tough stains and germs."
     },
@@ -32,7 +32,7 @@
       "title": "Toilet Cleaner Fresh",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR1ZWPhMO3m53QZ4GjvZ_AQjb_5PcZDjBqgQ&s",
       "newPrice": "280",
-      "category": "Liquid Soap/toilet",
+      "category": "Toilet Disinfectant Liquid/Toilet wash",
       "available": true,
       "description": "Fresh-scented toilet cleaner for daily hygiene and shine."
     },
@@ -41,7 +41,7 @@
       "title": "Laundry Liquid Detergent",
       "img": "https://m.media-amazon.com/images/I/71BSR4CRJ3L._AC_UF1000,1000_QL80_.jpg",
       "newPrice": "450",
-      "category": "Liquid Soap/clothes use",
+      "category": "Multpurpose Liquid Soap/Clothes wash",
       "available": false,
       "description": "Effective laundry detergent for tough stains and vibrant colors."
     },
@@ -50,7 +50,7 @@
       "title": "Laundry Liquid Lavender",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaOaLEvwZzosvmoshELzqxsdBLnepu-BCzqA&s",
       "newPrice": "480",
-      "category": "Liquid Soap/clothes use",
+      "category": "Multpurpose Liquid Soap/Clothes wash",
       "available": true,
       "description": "Lavender scented laundry liquid for soft, fresh clothes."
     },
@@ -59,7 +59,7 @@
       "title": "Floor Cleaner Lemon",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFvCSJ9VW8OXZ7F2sZQpaow8iR1zESPPm1vg&s",
       "newPrice": "350",
-      "category": "Liquid Soap/cleaning",
+      "category": "Multpurpose Liquid Soap/Clothes wash",
       "available": true,
       "description": "Lemon-scented floor cleaner that leaves floors sparkling clean."
     },
@@ -68,7 +68,7 @@
       "title": "Multi Surface Cleaner",
       "img": "https://i5.walmartimages.com/seo/Softsoap-Liquid-Hand-Soap-Kitchen-and-Bathroom-Hand-Soap-Juicy-Peach-7-5-Fluid-Ounce-Bottle_e111c20e-a0b4-4dc7-ac25-23f2b10757e9.0ea71f39c6f4b319d9570e8dc746d91a.jpeg",
       "newPrice": "330",
-      "category": "Liquid Soap/cleaning",
+      "category": "Multpurpose Liquid Soap/Dish wash",
       "available": false,
       "description": "Versatile multi-surface cleaner for kitchen, bathroom, and furniture."
     },
@@ -77,7 +77,7 @@
       "title": "Cleaning Gloves",
       "img": "https://murukali.com/cdn/shop/files/Cleanrol-Kitchen-Towel-Double-murukali-com-4977_512x512.jpg?v=1744977640",
       "newPrice": "100",
-      "category": "Hygien Tools/home use",
+      "category": "Multpurpose Liquid Soap/Glass Cleaner",
       "available": true,
       "description": "Durable gloves for safe and hygienic household cleaning."
     },
@@ -86,7 +86,7 @@
       "title": "Kitchen Scrub Sponge",
       "img": "https://murukali.com/cdn/shop/files/Everyday-kitchen-towels-4Pqs-murukali-com-6646_512x512.jpg?v=1744977229",
       "newPrice": "80",
-      "category": "Hygien Tools/home use",
+      "category": "Multpurpose Liquid Soap/Clothes wash",
       "available": true,
       "description": "Soft yet effective sponge for cleaning dishes and surfaces."
     },
@@ -95,7 +95,7 @@
       "title": "Toilet Brush Set",
       "img": "https://sensing.konicaminolta.asia/wp-content/uploads/2023/11/Measuring-The-Color-Of-Liquid-Soap.webp",
       "newPrice": "150",
-      "category": "Hygien Tools/toilet",
+      "category": "Hygrosan Equipments/Machine Wash",
       "available": false,
       "description": "Complete toilet brush set for efficient bathroom cleaning."
     },
@@ -104,7 +104,7 @@
       "title": "Toilet Plunger",
       "img": "https://ae01.alicdn.com/kf/S3c338c41fc894b568cfa057c4793cf41M.jpg",
       "newPrice": "180",
-      "category": "Hygien Tools/toilet",
+      "category": "Hygrosan Equipments/Fabric softener",
       "available": true,
       "description": "Strong plunger for unclogging toilets quickly and safely."
     },
@@ -113,7 +113,7 @@
       "title": "Laundry Basket Plastic",
       "img": "https://kuueza.com/wp-content/uploads/2025/02/liquid-soap-with-shadow.png",
       "newPrice": "300",
-      "category": "Hygien Tools/clothes use",
+      "category": "Hygrosan Equipments/Machine Wash",
       "available": true,
       "description": "Lightweight plastic laundry basket for organizing clothes."
     },
@@ -122,7 +122,7 @@
       "title": "Clothes Washing Brush",
       "img": "https://5.imimg.com/data5/ANDROID/Default/2023/2/NG/CT/IY/34927580/product-jpeg.jpg",
       "newPrice": "120",
-      "category": "Hygien Tools/clothes use",
+      "category": "Hygrosan Equipments/Fabric softener",
       "available": false,
       "description": "Durable brush for scrubbing clothes manually."
     },
@@ -131,7 +131,7 @@
       "title": "Mop Stick",
       "img": "https://5.imimg.com/data5/SELLER/Default/2021/2/QT/LC/XL/21427697/5-litre-liquid-soap.jpg",
       "newPrice": "500",
-      "category": "Hygien Tools/cleaning",
+      "category": "Hygrosan Equipments/Fabric softener" ,
       "available": true,
       "description": "Sturdy mop stick for effortless floor cleaning."
     },
@@ -140,7 +140,7 @@
       "title": "Broom Soft Brush",
       "img": "https://www.heatingandprocess.com/wp-content/uploads/2017/01/Drum-Heating-Liquid-Soaps.jpg",
       "newPrice": "200",
-      "category": "Hygien Tools/cleaning",
+      "category": "Hygrosan Equipments/Fabric softener",
       "available": true,
       "description": "Soft broom for dusting and sweeping all floor types."
     },
@@ -149,7 +149,7 @@
       "title": "Dust Pan Set",
       "img": "https://m.media-amazon.com/images/I/81b3ERqhA6L._SL1500_.jpg",
       "newPrice": "150",
-      "category": "Hygien Tools/cleaning",
+      "category": "Hygrosan Equipments/Fabric softener",
       "available": false,
       "description": "Complete dustpan set for easy floor debris collection."
     },
@@ -158,7 +158,7 @@
       "title": "Cleaning Cloth Pack",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHEblkSvf57XI9XGw-pzNEA8SzaY4JvPWBng&s",
       "newPrice": "90",
-      "category": "Hygien Tools/home use",
+      "category": "Hygrosan Equipments/Fabric softener",
       "available": true,
       "description": "Pack of soft cleaning cloths for multipurpose use."
     },
@@ -167,7 +167,7 @@
       "title": "Glass Cleaner Spray",
       "img": "https://www.tyoemcosmetic.com/wp-content/uploads/Liquid-Soap-Scent-8-300x300.jpg",
       "newPrice": "260",
-      "category": "Liquid Soap/cleaning",
+      "category": "Multpurpose Liquid Soap/Clothes wash",
       "available": true,
       "description": "Spray cleaner for streak-free glass and mirrors."
     },
@@ -176,7 +176,7 @@
       "title": "Fabric Softener Liquid",
       "img": "https://static.independent.co.uk/2023/06/28/13/best-luxury-handwash-indybest-review.psd.png",
       "newPrice": "420",
-      "category": "Liquid Soap/clothes use",
+      "category": "Multpurpose Liquid Soap/Hand wash",
       "available": false,
       "description": "Liquid fabric softener that leaves clothes soft and fresh."
     }

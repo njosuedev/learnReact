@@ -12,7 +12,7 @@ export default function Banner() {
 
   return (
     <div className="banner">
-      <h2 className="banner-title">🔥 Comming soon🔥</h2>
+      {/* <h2 className="banner-title">🔥 Comming soon🔥</h2> */}
 
       <div className="scrolling-track">
         {products.concat(products).map((product, idx) => {

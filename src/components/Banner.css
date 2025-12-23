@@ -20,8 +20,8 @@
 }
 
 .product-img {
-  min-width: 180px;
-  height: 180px;
+  min-width: 115px;
+  height: 90px;
   position: relative;
   flex-shrink: 0;
   border-radius: 1rem;
@@ -45,7 +45,7 @@
   top: 8px;
   left: 8px;
   padding: 0.2rem 0.5rem;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: bold;
   border-radius: 0.3rem;
   color: #fff;
@@ -95,7 +95,7 @@
   }
 
   .product-img {
-    min-width: 140px;
-    height: 140px;
+    min-width: 110px;
+    height: 90px;
   }
 }
