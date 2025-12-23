@@ -1,6 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { FiMenu, FiSearch, FiShoppingCart, FiHome, FiInfo, FiBox } from "react-icons/fi";
+import {
+  FiMenu,
+  FiHome,
+  FiInfo,
+  FiBox,
+  FiPhone,
+  FiMail,
+} from "react-icons/fi";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -9,16 +16,30 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       {/* Left: Logo */}
-      <Link to="/" className="logo-link">
-        <img src="/hygiene.png" alt="Hygiene Store" className="logo-img" />
-      </Link>
+      <NavLink to="/" className="logo-link">
+        <img src="/Logo.svg" alt="Hygiene Store" className="logo-img" />
+      </NavLink>
 
-      {/* Right: Desktop Links */}
-      <div className="navbar-links">
-        <Link to="/" className="nav-item"><FiHome /> Home</Link>
-        <Link to="/products" className="nav-item"><FiBox /> Products</Link>
-        <Link to="/hygrosan" className="nav-item"><FiInfo /> About</Link>
+      {/* Center Links */}
+      <div className="navbar-center">
+        <NavLink to="/" className="nav-item">
+          <FiHome /> Home
+        </NavLink>
+        <NavLink to="/products" className="nav-item">
+          <FiBox /> Products
+        </NavLink>
+        <NavLink to="/hygrosan" className="nav-item">
+          <FiInfo /> About
+        </NavLink>
+        <NavLink to="/contact" className="nav-item">
+          <FiMail /> Contact Us
+        </NavLink>
       </div>
+
+      {/* Right Phone */}
+      <a href="tel:+250794000813" className="nav-phone">
+        <FiPhone /> +250 794 000 813
+      </a>
 
       {/* Mobile Toggle */}
       <button className="menu-toggle" onClick={() => setOpen(!open)}>
@@ -27,10 +48,22 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${open ? "show" : ""}`}>
-        <input className="mobile-search" type="text" placeholder="Search products..." />
-        <Link to="/" onClick={() => setOpen(false)}><FiHome /> Home</Link>
-        <Link to="/products" onClick={() => setOpen(false)}><FiBox /> Products</Link>
-        <Link to="/hygrosan" onClick={() => setOpen(false)}><FiInfo /> About</Link>
+        <NavLink to="/" onClick={() => setOpen(false)}>
+          <FiHome /> Home
+        </NavLink>
+        <NavLink to="/products" onClick={() => setOpen(false)}>
+          <FiBox /> Products
+        </NavLink>
+        <NavLink to="/hygrosan" onClick={() => setOpen(false)}>
+          <FiInfo /> About
+        </NavLink>
+        <NavLink to="/contact" onClick={() => setOpen(false)}>
+          <FiMail /> Contact Us
+        </NavLink>
+
+        <a href="tel:+250789564753">
+          <FiPhone /> +250 789 564 753
+        </a>
       </div>
     </nav>
   );
