@@ -1,65 +1,115 @@
-import React, { useContext, useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
-import { ProductsContext } from "../contexts/ProductsContext.jsx";
-import './Home.css';
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import "./Home.css";
 
 export default function Home() {
-  const { products, loading, error } = useContext(ProductsContext);
-  const { activeCategory } = useOutletContext();
-  const [searchProduct, setSearchProduct] = useState("");
+  const slides = [
+    {
+      image: "/assets/banner1.jpg",
+      title: "Cleanliness Made Simple",
+      text: "Premium hygiene tools and chemical solutions for everyday life.",
+    },
+    {
+      image: "/assets/banner2.jpg",
+      title: "Smart Sanitation Products",
+      text: "Safe, effective, and eco-friendly cleaning essentials.",
+    },
+    {
+      image: "/assets/banner3.jpg",
+      title: "Your Hygiene, Our Priority",
+      text: "Top-quality soaps, detergents, and sanitizers delivered fast.",
+    },
+  ];
 
-  const filteredProducts = products
-    .filter(product =>
-      product.title.toLowerCase().includes(searchProduct.toLowerCase())
-    )
-    .filter(product => {
-      if (!activeCategory || activeCategory === "all") return true;
-      return product.category.toLowerCase() === activeCategory.toLowerCase();
-    });
+  const collections = [
+    {
+      id: 1,
+      title: "Soaps & Sanitizers",
+      images: [
+        "/assets/soap1.jpg",
+        "/assets/soap2.jpg",
+        "/assets/soap3.jpg",
+        "/assets/soap4.jpg",
+      ],
+      link: "/products?category=soaps",
+    },
+    {
+      id: 2,
+      title: "Cleaning Chemicals",
+      images: [
+        "/assets/chemical1.jpg",
+        "/assets/chemical2.jpg",
+        "/assets/chemical3.jpg",
+        "/assets/chemical4.jpg",
+      ],
+      link: "/products?category=chemicals",
+    },
+    {
+      id: 3,
+      title: "Hygiene Tools",
+      images: [
+        "/assets/brush1.jpg",
+        "/assets/mop1.jpg",
+        "/assets/brush2.jpg",
+        "/assets/mop2.jpg",
+      ],
+      link: "/products?category=tools",
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(
+      () => setCurrent((prev) => (prev + 1) % slides.length),
+      5000
+    );
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="home-page">
-      <input
-        type="text"
-        placeholder="Search products..."
-        value={searchProduct}
-        onChange={(e) => setSearchProduct(e.target.value)}
-        className="search-input"
-      />
 
-      <div className="products-grid">
-        {loading
-          ? Array.from({ length: 8 }).map((_, i) => (
-              <div className="product-card skeleton" key={i}>
-                <div className="image-wrapper skeleton-box"></div>
-                <div className="product-title skeleton-box"></div>
-                <div className="product-category skeleton-box"></div>
-                <div className="product-status skeleton-box"></div>
+      {/* ===== FULL-WIDTH HERO ===== */}
+      <section className="hero-red">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`hero-slide ${index === current ? "active" : ""}`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          >
+            <div className="hero-overlay">
+              <span className="hero-badge">New</span>
+              <h1>{slide.title}</h1>
+              <p>{slide.text}</p>
+              <Link to="/products" className="hero-btn">
+                Shop Now →
+              </Link>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      {/* ===== AMAZON-STYLE COLLECTIONS ===== */}
+      <section className="collections">
+        <h2 className="collections-title">Shop by Category</h2>
+        <div className="collections-grid">
+          {collections.map((col) => (
+            <div className="collection-card" key={col.id}>
+              <div className="collection-images">
+                {col.images.map((img, idx) => (
+                  <img src={img} alt={`${col.title} ${idx + 1}`} key={idx} />
+                ))}
               </div>
-            ))
-          : filteredProducts.length > 0
-          ? filteredProducts.map(product => {
-              const slug = product.title.trim().replace(/\s+/g, "-").toLowerCase();
-              return (
-                <div key={product.id} className="product-card">
-                  <Link to={`/products/${slug}`} className="image-link">
-                    <div className="image-wrapper">
-                      <img src={product.img} alt={product.title} className="product-image" />
-                      <span className={`status-badge ${product.available ? "available" : "unavailable"}`}>
-                        {product.available ? "Available" : "Unavailable"}
-                      </span>
-                    </div>
-                  </Link>
-                  <h3 className="product-title">{product.title}</h3>
-                  <p className="product-category">{product.category}</p>
-                </div>
-              );
-            })
-          : <p className="no-products">No products found.</p>
-        }
-      </div>
+              <h3>{col.title}</h3>
+              <Link to={col.link} className="collection-link">
+                Shop now →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {error && <p className="error">Error: {error}</p>}
     </div>
   );
 }

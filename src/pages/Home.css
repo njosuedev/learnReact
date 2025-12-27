@@ -1,124 +1,215 @@
-/* Import Roboto Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-* {
+/* ===== FULL-WIDTH HERO ===== */
+.hero-red {
+  position: relative;
+  width: 100%; /* Use 100% instead of 100vw to prevent overflow */
+  max-width: 100%;
+  height: 540px;
+  overflow: hidden;
+  background: #111;
   box-sizing: border-box;
 }
-.home-page {
-  max-width: 1300px;
-  margin: auto;
-  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.home-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.hero-overlay {
+  height: 100%;
+  width: 100%;
+  padding: 0 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(180, 0, 0, 0.85),
+    rgba(160, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.1)
+  );
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  width: fit-content;
+  letter-spacing: 0.4px;
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  max-width: 650px;
+  line-height: 1.2;
   font-weight: 700;
 }
 
-.search-input {
-  width: 100%;
-  max-width: 650px;
-  padding: 0.6rem 3rem;
-  margin: 0.5rem auto 2rem;
-  display: block;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #333;
-  outline: none;
-  border: 2px solid #a8a7a7;
+.hero-overlay p {
+  max-width: 520px;
+  margin: 1.2rem 0 2rem;
+  font-size: 1.15rem;
+  opacity: 0.95;
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.product-card {
-  background: #fff;
-  border-radius: 1rem;
-  padding: 0.8rem;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-.image-wrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 1rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f5f5;
-}
-
-.product-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Availability Badge */
-.status-badge {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border-radius: 12px;
+.hero-btn {
+  background: linear-gradient(135deg, #ff4d4d, #b30000);
   color: #fff;
-  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  width: fit-content;
+  box-shadow: 0 10px 28px rgba(179, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.status-badge.available {
-  background-color: #28a745;
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(179, 0, 0, 0.45);
 }
 
-.status-badge.unavailable {
-  background-color: #dc3545;
+/* ===== COLLECTIONS ===== */
+.collections {
+  padding: 4rem 7%;
+  background: #fafafa;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent accidental overflow */
 }
 
-/* Product Title */
-.product-title {
-  font-weight: 500;
-  margin: 0.6rem 0 0.3rem;
-  font-size: 1rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+.collections-title {
+  font-size: 2rem;
+  color: #8b0000;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+}
+
+.collection-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Product Category */
-.product-category {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 0.5rem;
+.collection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
 }
 
-/* No Products */
-.no-products {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #777;
-  text-align: right ;
+.collection-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 2px;
 }
 
-/* Skeleton Loader */
-.skeleton-box {
-  background: #f5f1f1;
-  border-radius: 0.5rem;
+.collection-images img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.25s ease;
+}
+
+.collection-card:hover .collection-images img {
+  transform: scale(1.05);
+}
+
+.collection-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1rem 1rem 0.8rem;
+  color: #111;
+}
+
+.collection-link {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #b30000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.collection-link:hover {
+  background: #ff3b3b;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-red {
+    height: 440px;
+  }
+  .hero-overlay h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-red {
+    height: 360px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .collections-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+
+  .collection-card {
+    min-width: 260px;
+    scroll-snap-align: start;
+  }
+
+  .collection-images {
+    grid-template-rows: 80px 80px;
+  }
+
+  .collection-images img {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
 }

@@ -11,18 +11,19 @@ import "./Sidebar.css";
 
 export default function Sidebar({ activeCategory, setActiveCategory }) {
   const navigate = useNavigate();
-  const { products } = useContext(ProductsContext);
+  const { products, setFilteredProducts } = useContext(ProductsContext);
 
   const [categories, setCategories] = useState({});
   const [openMain, setOpenMain] = useState(null);
 
+  // Build categories dynamically from products
   useEffect(() => {
     if (!products?.length) return;
 
     const grouped = {};
 
     products.forEach(p => {
-      const cat = p.category.toLowerCase();
+      const cat = p.category?.toLowerCase() || "uncategorized";
       const [main, sub] = cat.split("/");
 
       if (!grouped[main]) grouped[main] = new Set();
@@ -37,9 +38,28 @@ export default function Sidebar({ activeCategory, setActiveCategory }) {
     setCategories(formatted);
   }, [products]);
 
+  // Handle category selection and navigate to /products
   const handleSelect = value => {
     setActiveCategory(value);
-    navigate("/");
+
+    // Filter products
+    let filtered = [];
+    if (value === "all") {
+      filtered = products;
+    } else {
+      const [main, sub] = value.split("/");
+      filtered = products.filter(p => {
+        const cat = p.category?.toLowerCase();
+        if (sub) return cat === `${main}/${sub}`;
+        return cat.startsWith(main);
+      });
+    }
+
+    // Update filtered products
+    setFilteredProducts(filtered);
+
+    // Always navigate to the main products page
+    navigate("/products");
   };
 
   const toggleMain = main => {
@@ -51,9 +71,7 @@ export default function Sidebar({ activeCategory, setActiveCategory }) {
       <h2 className="sidebar-title">Categories</h2>
 
       {/* All products */}
-      <label
-        className={`radio-item ${activeCategory === "all" ? "active" : ""}`}
-      >
+      <label className={`radio-item ${activeCategory === "all" ? "active" : ""}`}>
         <input
           type="radio"
           name="category"
@@ -64,19 +82,16 @@ export default function Sidebar({ activeCategory, setActiveCategory }) {
         All Products
       </label>
 
-      {/* Categories */}
+      {/* Dynamic categories */}
       {Object.keys(categories).map(main => (
         <div key={main} className="category-group">
-          {/* Main category */}
           <div
             className={`category-main ${openMain === main ? "open" : ""}`}
             onClick={() => toggleMain(main)}
           >
             <div className="left">
               <FaLayerGroup className="icon" />
-              <span>
-                {main.charAt(0).toUpperCase() + main.slice(1)}
-              </span>
+              <span>{main.charAt(0).toUpperCase() + main.slice(1)}</span>
             </div>
 
             {openMain === main ? (
@@ -86,7 +101,6 @@ export default function Sidebar({ activeCategory, setActiveCategory }) {
             )}
           </div>
 
-          {/* Subcategories */}
           {openMain === main && (
             <div className="category-children">
               {categories[main].map(sub => {

@@ -1,171 +1,142 @@
-/* ===============================
-   Layout Base
-================================ */
-.layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #f9fafb;
-}
-
-/* ===============================
-   Body
-================================ */
-.layout-body {
-  display: flex;
-  flex: 1;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  align-items: flex-start;
-}
-
-/* ===============================
-   Sidebar (Sticky)
-================================ */
-.layout-sidebar {
-  width: 270px;
-  background: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  padding: 1.3rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-
-  /* Sticky behavior */
-  position: sticky;
-  top: 88px; /* height of navbar */
-  align-self: flex-start;
-
-  transition: box-shadow 0.25s ease;
-}
-
-.layout-sidebar:hover {
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-}
-
-/* Sidebar Title */
-.sidebar-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.9rem;
-  letter-spacing: -0.3px;
-}
-
-/* ===============================
-   Category Groups
-================================ */
-.category-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.category-main {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #111827;
-  margin-top: 0.7rem;
-  padding: 0.3rem 0.4rem;
-}
-
-/* ===============================
-   Radio Items
-================================ */
-.radio-item {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.5rem 0.65rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  color: #374151;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
-}
-
-.radio-item:hover {
-  background: #f3f4f6;
-  transform: translateX(2px);
-}
-
-/* Active State */
-.radio-item.active {
-  background: linear-gradient(135deg, #fff1f2, #ffe4e6);
-  color: #a50d26;
-  font-weight: 600;
-  border-left: 3px solid #a50d26;
-}
-
-/* Sub Items */
-.radio-item.sub {
-  margin-left: 1rem;
-  font-size: 0.9rem;
-  color: #6b4c55;
-}
-
-/* Radio Button */
-input[type="radio"] {
-  accent-color: #a50d26;
-  cursor: pointer;
-}
-
-/* ===============================
-   Main Content
-================================ */
-.layout-content {
-  flex: 1;
-  background: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #e5e7eb;
-  padding: 1.7rem;
-  overflow-y: auto;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-}
-
-/* Scrollbar */
-.layout-content::-webkit-scrollbar {
-  width: 8px;
-}
-.layout-content::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 6px;
-}
-.layout-content::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
-}
-
-/* ===============================
-   Footer
-================================ */
-.footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #6b7280;
-  border-top: 1px solid #e5e7eb;
-  background: #ffffff;
-}
-
-/* ===============================
-   Responsive
-================================ */
-@media (max-width: 768px) {
-  .layout-body {
+  /* ===============================
+    Layout Base
+  ================================ */
+  .layout {
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
-    padding: 1rem;
+    font-family: "Segoe UI", Tahoma, sans-serif;
   }
 
+  /* ===============================
+    Body
+  ================================ */
+  .layout-body {
+    display: flex;
+    flex: 1;
+    gap: 0rem;
+    align-items: flex-start;
+  }
+
+  /* ===============================
+    Sidebar (Sticky)
+  ================================ */
   .layout-sidebar {
-    width: 100%;
-    position: relative;
-    top: auto;
+    width: 270px;
+    padding: 1.3rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    /* Sticky behavior */
+    position: sticky;
+    top: 88px; /* height of navbar */
+    align-self: flex-start;
   }
 
-  .layout-content {
-    padding: 1rem;
+  /* Sidebar Title */
+  .sidebar-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.3px;
   }
-}
+
+  /* ===============================
+    Category Groups
+  ================================ */
+  .category-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .category-main {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    margin-top: 0.7rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  /* ===============================
+    Radio Items
+  ================================ */
+  .radio-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.5rem 0.65rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #374151;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  }
+
+ 
+  /* Sub Items */
+  .radio-item.sub {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: #6b4c55;
+  }
+
+  /* Radio Button */
+  input[type="radio"] {
+    accent-color: #a50d26;
+    cursor: pointer;
+  }
+
+  /* ===============================
+    Main Content
+  ================================ */
+  .layout-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  /* Scrollbar */
+  .layout-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  .layout-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 6px;
+  }
+  .layout-content::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  /* ===============================
+    Footer
+  ================================ */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+  }
+
+  /* ===============================
+    Responsive
+  ================================ */
+  @media (max-width: 768px) {
+    .layout-body {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .layout-sidebar {
+      width: 100%;
+      position: relative;
+      top: auto;
+    }
+
+    .layout-content {
+      padding: 1rem;
+    }
+  }
